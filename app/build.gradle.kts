@@ -6,7 +6,7 @@ plugins {
 
 android {
     namespace = "com.example.pr_kotlin_1modul"
-    compileSdk = 35
+    compileSdk = 36
 
     defaultConfig {
         applicationId = "com.example.pr_kotlin_1modul"
