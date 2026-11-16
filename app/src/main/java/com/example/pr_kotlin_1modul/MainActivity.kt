@@ -9,7 +9,12 @@ import androidx.compose.foundation.layout.safeDrawingPadding
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.res.stringResource
+import androidx.compose.ui.text.font.FontStyle
+import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
+import androidx.compose.ui.unit.sp
 import com.example.pr_kotlin_1modul.ui.theme.PR_Kotlin_1modulTheme
 
 class MainActivity : ComponentActivity() {
@@ -36,7 +41,13 @@ fun Hello(name: String?) {
 @Preview(name = "portrait", showSystemUi = true)
 @Composable
 fun HelloPreviewPortrait() {
-    Hello("Android")
+    Text(
+        text = stringResource(R.string.compose_description),
+        color = Color.Green,
+        fontSize = 16.sp,
+        fontStyle = FontStyle.Italic,
+        textAlign = TextAlign.Center
+    )
 }
 
 @Preview(name = "landscape", showSystemUi = true, device = "spec:orientation=landscape,width=411dp,height=891dp")
@@ -56,3 +67,4 @@ fun HelloPreviewLandscape() {
 fun HelloPreviewRound() {
     Hello("Android")
 }
+
